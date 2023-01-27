@@ -3,7 +3,7 @@
 
 Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/lunar64"
-  config.vm.hostname = "andor"
+  config.vm.hostname = "ando"
   #config.vm.box_version = '1.2.6'
   config.vbguest.auto_update = false
 
