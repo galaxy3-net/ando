@@ -2,6 +2,8 @@
 
 sudo apt update && \
 sudo apt upgrade -y && \
+sudo apt install -y virtualbox-guest-utils && \
+sudo apt install -y virtualbox-guest-x11 && \
 sudo apt install -y slim && \
 sudo apt install -y lightdm && \
 sudo apt install -y ubuntu-desktop && \
