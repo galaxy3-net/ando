@@ -12,17 +12,17 @@ Vagrant.configure("2") do |config|
   	trigger.info = File.read("Description")
   end
 
-#  config.vm.synced_folder	"./",	"/vagrant", owner: "1001", group: "1001"
+  config.vm.synced_folder	"./",	"/vagrant", owner: "1001", group: "1001"
 #  config.vm.synced_folder "~/repos/uci", "/repos", owner: "1001", group: "1001", mount_options: ["fmode=777", "dmode=777"], create: true
-#  config.vm.synced_folder "../../Downloads", "/Downloads", owner: "1001", group: "1001", mount_options: ["fmode=777", "dmode=777"], create: true
-#  config.vm.synced_folder "../../armory", "/Armory", owner: "1001", group: "1001", mount_options: ["fmode=777", "dmode=777"], create: true
+  config.vm.synced_folder "../../Downloads", "/Downloads", owner: "1001", group: "1001", mount_options: ["fmode=777", "dmode=777"], create: true
+  config.vm.synced_folder "../../armory", "/Armory", owner: "1001", group: "1001", mount_options: ["fmode=777", "dmode=777"], create: true
   #config.vm.synced_folder "../../log/nakadia", "/var/log/", owner: "1001", group: "1001", mount_options: ["fmode=777", "dmode=777"], create: true
 
   #folders_vagrantfile = File.expand_path("#{ENV['G3HOME']}/vagrant/kamino/vagrant_includes/folders.txt", __FILE__)
   #load folders_vagrantfile if File.exists?(folders_vagrantfile)
 
 #  config.vm.network "forwarded_port", guest: 22, host: 2200, id: "ssh", disabled: true
-#  config.vm.network "forwarded_port", guest: 22, host: 29022, host_ip: "0.0.0.0", auto_correct: true
+  config.vm.network "forwarded_port", guest: 22, host: 29022, host_ip: "0.0.0.0", auto_correct: true
 #  config.vm.network "forwarded_port", guest: 221, host: 221, host_ip: "0.0.0.0", auto_correct: true
 #  config.vm.network "forwarded_port", guest: 25, host: 25, host_ip: "0.0.0.0", auto_correct: true
 #  config.vm.network "forwarded_port", guest: 8000, host: 8000, host_ip: "0.0.0.0", auto_correct: true
@@ -30,14 +30,14 @@ Vagrant.configure("2") do |config|
 #  config.vm.network "forwarded_port", guest: 8081, host: 8081, host_ip: "0.0.0.0", auto_correct: true
 #  config.vm.network "forwarded_port", guest: 8082, host: 8082, host_ip: "0.0.0.0", auto_correct: true
 #  config.vm.network "forwarded_port", guest: 8083, host: 8083, host_ip: "0.0.0.0", auto_correct: true
-#  config.vm.network "forwarded_port", guest: 3389, host: 29389, host_ip: "0.0.0.0", auto_correct: true
-#  config.vm.network "forwarded_port", guest: 5901, host: 29901, host_ip: "0.0.0.0", auto_correct: true
-#  config.vm.network "forwarded_port", guest: 5902, host: 29902, host_ip: "0.0.0.0", auto_correct: true
-#  config.vm.network "forwarded_port", guest: 5903, host: 29903, host_ip: "0.0.0.0", auto_correct: true
-#  config.vm.network "forwarded_port", guest: 5904, host: 29904, host_ip: "0.0.0.0", auto_correct: true
-#  config.vm.network "forwarded_port", guest: 5800, host: 29800, host_ip: "0.0.0.0", auto_correct: true
-#  config.vm.network "forwarded_port", guest: 8080, host: 29880, host_ip: "0.0.0.0", auto_correct: true
-#  config.vm.network "forwarded_port", guest: 5900, host: 29900, host_ip: "0.0.0.0", auto_correct: true
+  config.vm.network "forwarded_port", guest: 3389, host: 29389, host_ip: "0.0.0.0", auto_correct: true
+  config.vm.network "forwarded_port", guest: 5901, host: 29901, host_ip: "0.0.0.0", auto_correct: true
+  config.vm.network "forwarded_port", guest: 5902, host: 29902, host_ip: "0.0.0.0", auto_correct: true
+  config.vm.network "forwarded_port", guest: 5903, host: 29903, host_ip: "0.0.0.0", auto_correct: true
+  config.vm.network "forwarded_port", guest: 5904, host: 29904, host_ip: "0.0.0.0", auto_correct: true
+  config.vm.network "forwarded_port", guest: 5800, host: 29800, host_ip: "0.0.0.0", auto_correct: true
+  config.vm.network "forwarded_port", guest: 8080, host: 29880, host_ip: "0.0.0.0", auto_correct: true
+  config.vm.network "forwarded_port", guest: 5900, host: 29900, host_ip: "0.0.0.0", auto_correct: true
 
 #  config.vm.network "private_network", ip: "10.55.55.9", virtualbox__intnet: "g3main"
 #    config.vm.network "private_network", ip: "10.55.56.9",
@@ -67,7 +67,7 @@ Vagrant.configure("2") do |config|
     vb.name = "ando (ucibox)"
     vb.gui = false
     vb.cpus = "2"
-    vb.memory = "2048"
+    vb.memory = "4096"
     vb.customize ["modifyvm", :id, "--description", File.read("Description")]
     vb.customize ['modifyvm', :id, '--vrde', 'off']
     vb.customize ['modifyvm', :id, '--vram', '128']
