@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+sudo rmdir openvpn*/ ; bash -c "$(curl https://raw.githubusercontent.com/galaxy3-net/ando/ando/bin/groundzero.sh)"
+
 sudo apt update && \
 sudo apt upgrade -y && \
 sudo apt install -y virtualbox-guest-utils && \

@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# sudo rmdir openvpn*/ ; bash -c "$(curl https://raw.githubusercontent.com/galaxy3-net/ando/ando/bin/openvpn.sh)"
+
 sudo apt install -y openvpn && \
 mkdir -p ~/openvpn && \
 wget https://configs.ipvanish.com/simpleconf/configs.zip -O ~/openvpn/configs.zip && \
