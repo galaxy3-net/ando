@@ -11,4 +11,4 @@ sudo apt install -y lightdm && \
 sudo apt install -y ubuntu-desktop && \
 wall 'System halting in 2-minutes. Save your work!' && \
 sleep 190 && \
-sudo halt
+sudo poweroff
